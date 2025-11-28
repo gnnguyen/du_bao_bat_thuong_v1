@@ -147,7 +147,7 @@ if choice == 'Home':
         "<h2 style='text-align: center;color:blue; font-size: 2em, '>NGUYỄN NGỌC GIAO - NGUYỄN THỊ TUYỂN</h2>",
         unsafe_allow_html=True)
     st.markdown("""
-            ## 📊 Dự án: Hệ thống dự đoán giá xe cũ và phát hiện bất thường về giá.
+            ## 📘 Dự án: Hệ thống dự đoán giá xe cũ và phát hiện bất thường về giá.
             Ứng dụng giúp dự đoán giá xe và phát hiện bất thường giá xe dựa trên nội dung thông số kỹ thuật và thông tin xe
             """)
     col1, col2 = st.columns(2)
@@ -157,7 +157,7 @@ if choice == 'Home':
         st.write("Cảnh báo bất thường dựa trên phân tích sai số giữa giá đề nghị và giá dự đoán.")
     
     with col1:
-        st.markdown("#### 🚀 Dự đoán giá trị xe")
+        st.markdown("#### 📊 Dự đoán giá trị xe")
         st.write("Ước lượng giá xe dựa vào mô hình học máy.")
 
 
@@ -178,16 +178,25 @@ elif choice=="Chợ xe máy cũ và Mục tiêu của dự án":
                 - Phát hiện giá bán bất thường từ những thông số thực tế của xe máy rao bán.
             - Phát triển ứng dụng web để người sử dụng có thể truy xuất trực tuyến kết quả của các mô hình đã xây dựng.
             """)
-    st.info("📁 Dataset gồm hơn 7000 xe từ 195 thương hiệu với nhiều phân khúc từ bình dân đến cao cấp.")
-    fig, ax = plt.subplots()
-    ax.hist(df["Giá"])
-    st.pyplot(fig)
-    
+    st.info("📁 Dataset từ trang chợ tốt gồm hơn 7000 xe từ 195 thương hiệu với nhiều phân khúc từ bình dân đến cao cấp.")
+    # fig, ax = plt.subplots()
+    # ax.hist(df["Giá"])
+    # st.pyplot(fig)
+    st.image("./files/eda1.png")
+    st.image("./files/eda2.png")
+    st.image("./files/eda3.png")
+    st.image("./files/eda4.png")
+    st.markdown("""
+            - Phân bố giá xe có xu hướng lệch phải, nhiều xe giá thấp và ít xe giá cao, có giá trị outlier => bổ sung cột giá trị log của cột giá để giúp mô hình học tốt và ổn định hơn.
+            - Phân bố số km đã đi có xu hướng lệch phải, nhiều xe có số km đã đi thấp và ít xe có số km đã đi cao.
+            - Một số hãng xe có giá trị thương hiệu cao (như Harley Davidson, Triumph, BMW ), dung tích xe > 175cc, xuất xứ Đức, Mỹ ảnh hưởng đáng kể đến giá.
+
+            """)  
 # -----------------------------------------------------------------------------
 # TAB 3: ĐÁNH GIÁ MÔ HÌNH
 # -----------------------------------------------------------------------------
 elif choice=="Đánh giá và lựa chọn mô hình thích hợp":
-    st.subheader("Đánh giá và lựa chọn mô hình thích hợp")
+    st.subheader("Đánh giá và lựa chọn mô hình thích hợp cho bài toán dự đoán giá")
     st.image("danh_gia_mo_hinh.png")
     st.markdown("""
             - Mô hình XGBoost có kết quả r2 cao nhất so với các mô hình khác trên môi trường Scikit-learn.
@@ -200,6 +209,14 @@ elif choice=="Đánh giá và lựa chọn mô hình thích hợp":
     st.markdown("""
             - Phần lớn các điểm số liệu nằm gần đường đỏ cho thấy mô hình dự đoán tương đối chính xác.
             - Tuy nhiên độ phân tán khá rộng, đặc biệt với các giá trị số liệu lớn. 
+            """)
+
+    st.subheader("Đánh giá và lựa chọn mô hình thích hợp cho bài toán cảnh báo bất thường")
+    st.image("./files/danh_gia_mo_hinh_anomaly.png")
+    st.markdown("""
+            - Mô hình có thể dự đoán giá xe máy cũ với các phương pháp biến động nhiều sai số trung bình khoảng 5–11% so với giá thực tế.
+            - Các mô hình ISO Forest, IQR và Z-score (XGBoost) cho kết quả phát hiện bất thường khá gần nhau.
+            - Do mô hình dự báo sử dụng XGBoost, nên Z-score (XGBoost) sẽ được sử dụng là phương pháp phát hiện bất thường do có độ tương thích cao với mô hình dự báo.
             """)
 
 # -----------------------------------------------------------------------------
@@ -532,6 +549,7 @@ elif choice=="Phân chia công việc trong nhóm nghiên cứu":
             - Xây dựng GUI phần Cosin similarity, Gensim và phân cụm 
 
             """)     
+
 
 
 
