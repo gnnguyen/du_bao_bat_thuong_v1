@@ -20,12 +20,12 @@ Bao gồm các bài toán sau:
 1. Các dữ liệu của project này được lưu tại folder final  
 2. Chạy project_01_final.ipynb cho bài toán 1
 3. Chạy project_02_final.ipynb cho bài toán 2
-4. ### 3.1 Chạy GUI
+4. Chạy GUI
 ```bash
 cd final/GUI
 streamlit run app.py
 ```
-Nhập thông tin xe → nhấn Predict → nhận giá dự đoán.
+Nhập thông tin xe → nhấn Predict → nhận giá dự đoán.  
 5. Webapp: 🌐 **Featured Resource: <a href="[https://dubaobatthuongv1-bnigjbuhepgjzgndxc63nz.streamlit.app/]" target="_blank" rel="noopener noreferrer">Dự báo bất thường</a>** 
 
 ## Cấu trúc file
