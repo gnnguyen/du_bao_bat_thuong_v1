@@ -29,9 +29,32 @@ Nhập thông tin xe → nhấn Predict → nhận giá dự đoán.
 5. Webapp: 🌐 **Featured Resource: <a href="[https://dubaobatthuongv1-bnigjbuhepgjzgndxc63nz.streamlit.app/]" target="_blank" rel="noopener noreferrer">Dự báo bất thường</a>** 
 
 ## Cấu trúc file
+
 final/
 │
-├── source_code/
+├── source_code/        # Chứa tất cả code Python, notebook, model
+│   ├── data_preprocessing.py
+│   ├── model_training.py
+│   ├── predict_price.py
+│   └── model.pkl
+│
+├── GUI/                # Ứng dụng giao diện
+│   ├── app.py
+│   └── assets/         # Hình ảnh, icon, CSS
+│
+├── slides/             # File trình bày
+│   └── presentation.pptx
+│
+├── images/             # Hình ảnh minh họa EDA, biểu đồ
+│   ├── scatter_tuoi_gia.png
+│   └── boxplot_dongxe.png
+│
+└── README.md           # File hướng dẫn
+
+
+final/
+│
+├── source_code/ # chứa tất cả code Python, notebook, model
 │ ├── du_bao_bat_thuong.py # bài toán dự báo bất thường
 │ ├── du_bao_gia.py # bài toán dự báo giá
 │ ├── project_01_final.ipynb # notebook bài toán 1
