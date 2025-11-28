@@ -179,7 +179,7 @@ elif choice=="Chợ xe máy cũ và Mục tiêu của dự án":
             """)
     st.info("📁 Dataset gồm hơn 7000 xe từ 195 thương hiệu với nhiều phân khúc từ bình dân đến cao cấp.")
     fig, ax = plt.subplots()
-    ax.hist(df["Gia"])
+    ax.hist(df["Giá"])
     st.pyplot(fig)
     
 # -----------------------------------------------------------------------------
@@ -531,5 +531,6 @@ elif choice=="Phân chia công việc trong nhóm nghiên cứu":
             - Xây dựng GUI phần Cosin similarity, Gensim và phân cụm 
 
             """)     
+
 
 
