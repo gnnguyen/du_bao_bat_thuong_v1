@@ -146,17 +146,17 @@ if choice == 'Home':
         "<h2 style='text-align: center;color:blue; font-size: 2em, '>NGUYỄN NGỌC GIAO - NGUYỄN THỊ TUYỂN</h2>",
         unsafe_allow_html=True)
     st.markdown("""
-            # 📊 Dự án: Hệ thống dự đoán giá xe cũ và phát hiện bất thường về giá.
+            ## 📊 Dự án: Hệ thống dự đoán giá xe cũ và phát hiện bất thường về giá.
             Ứng dụng giúp dự đoán giá xe và phát hiện bất thường giá xe dựa trên nội dung thông số kỹ thuật và thông tin xe
             """)
     col1, col2 = st.columns(2)
    
     with col2:
-        st.markdown("### 🤖 Cảnh báo bất thường")
+        st.markdown("#### 🤖 Cảnh báo bất thường")
         st.write("Cảnh báo bất thường dựa trên giá đề nghị và giá dự đoán.")
     
     with col1:
-        st.markdown("### 🚀 Dự đoán giá trị xe")
+        st.markdown("#### 🚀 Dự đoán giá trị xe")
         st.write("Ước lượng giá xe dựa vào mô hình học máy.")
 
 
@@ -529,3 +529,4 @@ elif choice=="Phân chia công việc trong nhóm nghiên cứu":
             - Xây dựng GUI phần Cosin similarity, Gensim và phân cụm 
 
             """)     
+
