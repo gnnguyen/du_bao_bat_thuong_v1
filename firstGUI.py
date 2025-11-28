@@ -182,10 +182,10 @@ elif choice=="Chợ xe máy cũ và Mục tiêu của dự án":
     # fig, ax = plt.subplots()
     # ax.hist(df["Giá"])
     # st.pyplot(fig)
-    st.image("./files/eda1.png")
-    st.image("./files/eda2.png")
-    st.image("./files/eda3.png")
-    st.image("./files/eda4.png")
+    st.image("./images/eda1.png")
+    st.image("./images/eda2.png")
+    st.image("./images/eda3.png")
+    st.image("./images/eda4.png")
     st.markdown("""
             - Phân bố giá xe có xu hướng lệch phải, nhiều xe giá thấp và ít xe giá cao, có giá trị outlier => bổ sung cột giá trị log của cột giá để giúp mô hình học tốt và ổn định hơn.
             - Phân bố số km đã đi có xu hướng lệch phải, nhiều xe có số km đã đi thấp và ít xe có số km đã đi cao.
@@ -212,7 +212,7 @@ elif choice=="Đánh giá và lựa chọn mô hình thích hợp":
             """)
 
     st.subheader("Đánh giá và lựa chọn mô hình thích hợp cho bài toán cảnh báo bất thường")
-    st.image("./files/danh_gia_mo_hinh_anomaly.png")
+    st.image("./images/danh_gia_mo_hinh_anomaly.png")
     st.markdown("""
             - Mô hình có thể dự đoán giá xe máy cũ với các phương pháp biến động nhiều sai số trung bình khoảng 5–11% so với giá thực tế.
             - Các mô hình ISO Forest, IQR và Z-score (XGBoost) cho kết quả phát hiện bất thường khá gần nhau.
@@ -549,6 +549,7 @@ elif choice=="Phân chia công việc trong nhóm nghiên cứu":
             - Xây dựng GUI phần Cosin similarity, Gensim và phân cụm 
 
             """)     
+
 
 
 
