@@ -146,12 +146,19 @@ if choice == 'Home':
         "<h2 style='text-align: center;color:blue; font-size: 2em, '>NGUYỄN NGỌC GIAO - NGUYỄN THỊ TUYỂN</h2>",
         unsafe_allow_html=True)
     st.markdown("""
-            - Tóm tắt thông tin về Chợ xe máy cũ
-            - Mục tiêu của dự án
-                - Bài toán 1: Dự đoán giá, xác định bất thường giá cho xe máy
-                - Bài toán 2: Đề xuất xe máy tương tự, phân khúc xe máy
-            - Phân chia công việc trong nhóm nghiên cứu
+            # 📊 Dự án: Hệ thống dự đoán giá xe cũ và phát hiện bất thường về giá.
+            Ứng dụng giúp dự đoán giá xe và phát hiện bất thường giá xe dựa trên nội dung thông số kỹ thuật và thông tin xe
             """)
+    col1, col2 = st.columns(2)
+   
+    with col2:
+        st.markdown("### 🤖 Cảnh báo bất thường")
+        st.write("Cảnh báo bất thường dựa trên giá đề nghị và giá dự đoán.")
+    
+    with col1:
+        st.markdown("### 🚀 Dự đoán giá trị xe")
+        st.write("Ước lượng giá xe dựa vào mô hình học máy.")
+
 
 # -----------------------------------------------------------------------------
 # TAB 2: GIỚI THIỆU DỰ ÁN
@@ -520,4 +527,5 @@ elif choice=="Phân chia công việc trong nhóm nghiên cứu":
             - Xây dựng mô hình đề xuất các xe máy tương tự bằng Cosin similarity và Gensim
             - Xây dựng mô hình phân cụm Kmeans, Gausian Mixture Model và Agglomerative Clustering trên môi trường Sklearn 
             - Xây dựng GUI phần Cosin similarity, Gensim và phân cụm 
+
             """)     
